@@ -5,7 +5,7 @@ using UnityEngine;
 public class MovementActivator10 : MonoBehaviour
 {
     [SerializeField] GameObject objectToActivate;
-    GameObject otherObjectToActivate;
+    [SerializeField] GameObject otherObjectToActivate; //Serialized the field, so it can accept an input.
 
     // Start is called before the first frame update
     void Start()
@@ -18,14 +18,14 @@ public class MovementActivator10 : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other) // Changed onTriggerEnter (not a Unity function) to OnTriggerEnter
     {
-        objectToActivate.GetComponent<MoveObject9>().enabled = true;
-        otherObjectToActivate.GetComponent<MoveObject9>().enabled = true;
+        objectToActivate.GetComponent<MoveObject10>().enabled = true; //changed from 9 to 10
+        otherObjectToActivate.GetComponent<MoveObject10>().enabled = true; //changed from 9 to 10
     }
-    private void OnTriggerExit(Collider other)
+    private void OnTriggerExit(Collider other) // Changed onTriggerEnter (not a Unity function) to OnTriggerEnter
     {
-        objectToActivate.GetComponent<MoveObject9>().enabled = true;
-        otherObjectToActivate.GetComponent<MoveObject9>().enabled = true;
+        objectToActivate.GetComponent<MoveObject10>().enabled = true; //changed from 9 to 10
+        otherObjectToActivate.GetComponent<MoveObject10>().enabled = true; //changed from 9 to 10
     }
 }
